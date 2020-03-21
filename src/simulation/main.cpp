@@ -43,7 +43,7 @@ void run_simulation(
     int n_steps) {
         // Open output file
         char file_path[1000];
-        std::sprintf(file_path, "result_a%ds%d.csv", n_agents, n_strategies);
+        std::sprintf(file_path, "../../results/a%ds%d.csv", n_agents, n_strategies);
         std::ofstream f(file_path);
 
         f << "public_information, excess_demand" << std::endl;
