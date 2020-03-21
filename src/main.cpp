@@ -11,6 +11,8 @@
 void run_simulation(int, int, int, float, float, int);
 
 int main(int argc, char **argv) {
+    std::vector<int> n_mg_agents_vec = {};
+    std::vector<int> n_q_agents_vec = {};
     std::vector<int> n_agents_vec = {10, 12, 16, 20, 26, 33, 42, 54, 69, 88, 112, 143, 183, 233, 297, 379, 483, 615, 784, 1000};
     std::vector<int> n_strategies_vec = {2, 3, 4};
     int n_public_information_patterns = 128;
