@@ -3,6 +3,7 @@ paper.pdf
 test.cpp
 *.csv
 *.txt
+.DS_Store
 
 # Prerequisites
 *.d

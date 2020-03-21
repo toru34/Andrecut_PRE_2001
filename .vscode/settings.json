@@ -65,6 +65,7 @@
         "__functional_03": "cpp",
         "__tree": "cpp",
         "map": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "deque": "cpp"
     }
 }

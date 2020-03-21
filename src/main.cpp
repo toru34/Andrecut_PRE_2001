@@ -43,10 +43,10 @@ void run_simulation(
     int n_steps) {
         // Open output file
         char file_path[1000];
-        std::sprintf(file_path, "../../results/a%ds%d.csv", n_agents, n_strategies);
+        std::sprintf(file_path, "../results/a%ds%d.csv", n_agents, n_strategies);
         std::ofstream f(file_path);
 
-        f << "public_information, excess_demand" << std::endl;
+        f << "public_information,excess_demand" << std::endl;
 
         std::uniform_int_distribution<int> uniform_int_dist(0, n_public_information_patterns - 1);
 
@@ -81,7 +81,7 @@ void run_simulation(
             }
             
             // Output data to file
-            f << public_information << ", " << excess_demand << std::endl;
+            f << public_information << "," << excess_demand << std::endl;
         }
 
         // Close output file
