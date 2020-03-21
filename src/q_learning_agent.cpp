@@ -21,7 +21,7 @@ QLearningAgent::QLearningAgent(int n_public_information_patterns, int n_strategi
     this->state_t = uniform_int_dist(mt_engine);
 }
 
-int QLearningAgent::take_action(int p) {
+int QLearningAgent::take_action(int public_information) {
     if (uniform_real_dist(mt_engine) < this->epsilon) { // Randomly pick strategy
         std::uniform_int_distribution<int> uniform_int_dist(0, this->q_table.size() - 1); // x ~ {0, 1, ..., S - 1}
         
@@ -30,7 +30,7 @@ int QLearningAgent::take_action(int p) {
         this->action_t = this->pick_best_strategy(this->state_t);
     }
 
-    return this->strategies[this->action_t].pick_action(p);
+    return this->strategies[this->action_t].pick_action(public_information);
 }
 
 void QLearningAgent::update_q_table(int excess_demand, int p) {
