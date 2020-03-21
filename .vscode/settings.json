@@ -66,6 +66,11 @@
         "__tree": "cpp",
         "map": "cpp",
         "valarray": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "clocale": "cpp",
+        "forward_list": "cpp",
+        "fstream": "cpp",
+        "iomanip": "cpp",
+        "stack": "cpp"
     }
 }
