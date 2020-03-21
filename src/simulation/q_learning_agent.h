@@ -4,8 +4,11 @@
 #include <vector>
 #include <random>
 #include <iostream>
+#include <iterator>
+#include <algorithm>
 
 #include "config.h"
+#include "minority_game_strategy.h"
 
 class QLearningAgent {
 private:
@@ -16,12 +19,14 @@ private:
     int state_t;
     int action_t;
 
+    std::vector<MinorityGameStrategy> strategies;
     std::vector<std::vector<float>> q_table;
 public:
-    QLearningAgent(int, float, float);
-    int take_action();
-    void update_q_table(int);
+    QLearningAgent(int, int, float, float);
+    int take_action(int);
+    void update_q_table(int, int);
     void update_state(int);
+    int pick_best_strategy(int);
 };
 
 #endif
