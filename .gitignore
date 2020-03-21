@@ -1,6 +1,8 @@
 # toru34
 paper.pdf
 test.cpp
+*.csv
+*.txt
 
 # Prerequisites
 *.d
