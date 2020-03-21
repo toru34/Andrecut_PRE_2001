@@ -12,6 +12,12 @@ MinorityGameAgent::MinorityGameAgent(int n_public_information_patterns, int n_st
     }
 }
 
+void MinorityGameAgent::update_scores(int excess_demand, int public_information) {
+    for (int i = 0; i < this->scores.size(); ++i) {
+        this->scores[i] -= this->strategies[i].pick_action(public_information) * excess_demand;
+    }
+}
+
 int MinorityGameAgent::take_action(int public_information) {
     int best_strategy = this->pick_best_strategy();
     

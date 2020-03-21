@@ -33,8 +33,8 @@ int QLearningAgent::take_action(int public_information) {
     return this->strategies[this->action_t].pick_action(public_information);
 }
 
-void QLearningAgent::update_q_table(int excess_demand, int p) {
-    float reward_t = - this->strategies[this->action_t].pick_action(p) * excess_demand;
+void QLearningAgent::update_q_table(int excess_demand, int public_information) {
+    float reward_t = - this->strategies[this->action_t].pick_action(public_information) * excess_demand;
     std::vector<float> q_values = this->q_table[this->action_t];
     float max_q_value = *std::max_element(std::begin(q_values), std::end(q_values));
 

@@ -12,6 +12,7 @@ private:
     std::vector<float> scores;
 public:
     MinorityGameAgent(int, int);
+    void update_scores(int, int);
     int take_action(int);
     int pick_best_strategy();
 };
