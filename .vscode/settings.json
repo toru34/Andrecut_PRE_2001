@@ -61,6 +61,10 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "__functional_03": "cpp",
+        "__tree": "cpp",
+        "map": "cpp",
+        "valarray": "cpp"
     }
 }
