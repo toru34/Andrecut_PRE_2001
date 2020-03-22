@@ -82,8 +82,9 @@ void run_simulation(
         }
 
         for (int step = 0; step < n_steps; ++step) {
-            // Generate external information
+            // Generate public information
             int public_information = uniform_int_dist(mt_engine);
+            
             // Collect agents' actions
             std::vector<int> actions;
             for (auto& q_agent : q_agents) {
