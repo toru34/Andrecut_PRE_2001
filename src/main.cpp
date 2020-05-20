@@ -16,7 +16,8 @@ int main(int argc, char **argv) {
     std::vector<int> n_q_agents_vec = {10, 11, 12, 14, 16, 18, 20, 22, 25, 28, 32, 36, 41, 46, 52, 58, 66, 74, 83, 94, 106, 119, 134, 151, 170, 191, 215, 242, 272, 307, 345, 388, 437, 492, 554, 623, 701, 789, 888, 1000};
     std::vector<int> n_strategies_vec = {2, 3, 4};
     int n_public_information_patterns = 128;
-    float learning_rate = 1.0 / n_public_information_patterns;
+    float learning_rate = 10.0 / n_public_information_patterns;
+    // float learning_rate = 0.5 / n_public_information_patterns;
     float discount_factor = 0.5;
     int n_steps = 100000; // 10^5
 
@@ -35,20 +36,20 @@ int main(int argc, char **argv) {
         }
     }
 
-    // Minority game agents
-    for (auto n_mg_agents : n_mg_agents_vec) {
-        for (auto n_strategies : n_strategies_vec) {
-            run_simulation(
-                0,
-                n_mg_agents,
-                n_strategies,
-                n_public_information_patterns,
-                learning_rate,
-                discount_factor,
-                n_steps
-            );
-        }
-    }
+    // // Minority game agents
+    // for (auto n_mg_agents : n_mg_agents_vec) {
+    //     for (auto n_strategies : n_strategies_vec) {
+    //         run_simulation(
+    //             0,
+    //             n_mg_agents,
+    //             n_strategies,
+    //             n_public_information_patterns,
+    //             learning_rate,
+    //             discount_factor,
+    //             n_steps
+    //         );
+    //     }
+    // }
 
     return 0;
 }
